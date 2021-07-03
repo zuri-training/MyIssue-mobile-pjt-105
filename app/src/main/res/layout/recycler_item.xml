@@ -3,33 +3,33 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="20dp">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="16dp">
+            android:padding="2dp">
 
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginTop="8dp"
-                android:src="@drawable/circular_background"
+                android:src="@drawable/photo2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,7 +37,7 @@
                 android:id="@+id/cardViewTv1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="1dp"
+                android:layout_marginLeft="1dp"
                 android:text="User is typing"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@id/imageView"
@@ -60,13 +60,10 @@
                 android:id="@+id/cardViewTv3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="112dp"
-                android:layout_marginRight="112dp"
+                android:layout_marginTop="16dp"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.989"
-                app:layout_constraintLef="@id/cardViewTv1"
+                app:layout_constraintHorizontal_bias="0.418"
                 app:layout_constraintStart_toEndOf="@+id/cardViewTv2"
                 app:layout_constraintTop_toBottomOf="@id/cardViewTv1"
                 tools:text="Frontend" />
@@ -75,25 +72,23 @@
                 android:id="@+id/cardViewTv4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:layout_marginBottom="32dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
                 android:text="What language should a developer focus on"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/cardViewTv3" />
 
-            <ImageView
+            <View
                 android:id="@+id/barrier"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/darker_gray"
                 android:layout_marginTop="16dp"
-                android:paddingBottom="16dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/divider"
-
                 app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardViewTv4" />
 
 
@@ -103,6 +98,7 @@
                 android:layout_height="wrap_content"
                 android:text="15 answers"
                 android:textSize="16sp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/barrier" />
 
@@ -111,6 +107,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="64dp"
+                android:layout_marginTop="8dp"
                 android:src="@drawable/rate_star_outline"
                 app:layout_constraintLeft_toRightOf="@+id/CardViewTv5"
                 app:layout_constraintTop_toBottomOf="@id/barrier" />
@@ -121,6 +118,7 @@
                 android:layout_height="wrap_content"
                 android:text="Rate"
                 android:textSize="16sp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintLeft_toRightOf="@+id/starIconIv"
                 app:layout_constraintTop_toBottomOf="@id/barrier" />
 
@@ -129,6 +127,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
                 android:src="@drawable/bookmark_outline"
                 app:layout_constraintLeft_toRightOf="@+id/CardViewTv6"
                 app:layout_constraintTop_toBottomOf="@+id/barrier" />
@@ -137,6 +136,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Save"
+                android:layout_marginTop="8dp"
                 app:layout_constraintLeft_toRightOf="@id/saveIconIv"
                 app:layout_constraintTop_toBottomOf="@id/barrier" />
 
