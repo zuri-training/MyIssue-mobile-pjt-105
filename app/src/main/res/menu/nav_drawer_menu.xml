@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="nav_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/menu_home_icon"
+            android:icon="@drawable/menu_home_icon"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/group_icon"
+            android:icon="@drawable/group_icon"
+            android:title="Group"/>
+
+        <item
+            android:id="@+id/events_icon"
+            android:icon="@drawable/events_icon"
+            android:title="Events"/>
+
+        <item
+            android:id="@+id/notification_icon"
+            android:icon="@drawable/notification_icon"
+            android:title="Notification"/>
+
+        <item
+            android:id="@+id/live_streaming_icon"
+            android:icon="@drawable/live_streaming_icon"
+            android:title="Live Streaming"/>
+
+        <item
+            android:id="@+id/settings_icon"
+            android:icon="@drawable/settings_icon"
+            android:title="Settings"/>
+
+        <item
+            android:id="@+id/history_icon"
+            android:icon="@drawable/history_icon"
+            android:title="History"/>
+
+        <item
+            android:id="@+id/blog_icon"
+            android:icon="@drawable/blog_icon"
+            android:title="Blog"/>
+
+        <item
+            android:id="@+id/find_friends_icon"
+            android:icon="@drawable/find_friends_icon"
+            android:title="Find Friends"/>
+
+        <item
+            android:id="@+id/privacy_icon"
+            android:icon="@drawable/privacy_icon"
+            android:title="Privacy"/>
+
+        <item
+            android:id="@+id/helps_icon"
+            android:icon="@drawable/helps_icon"
+            android:title="Helps"/>
+
+    </group>
+
+
+
+
+</menu>
