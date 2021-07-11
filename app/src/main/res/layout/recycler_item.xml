@@ -40,6 +40,7 @@
                 android:layout_marginLeft="1dp"
                 android:text="User is typing"
                 android:textSize="16sp"
+                android:fontFamily="@font/poppins_medium"
                 app:layout_constraintBottom_toBottomOf="@id/imageView"
                 app:layout_constraintLeft_toRightOf="@id/imageView"
                 app:layout_constraintRight_toRightOf="parent"
@@ -51,6 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:textSize="16sp"
+                android:fontFamily="@font/poppins_light"
                 app:layout_constraintLeft_toLeftOf="@id/imageView"
                 app:layout_constraintRight_toRightOf="@id/imageView"
                 app:layout_constraintTop_toBottomOf="@id/imageView"
@@ -62,6 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:textSize="16sp"
+                android:fontFamily="@font/poppins_medium"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.418"
                 app:layout_constraintStart_toEndOf="@+id/cardViewTv2"
@@ -77,6 +80,7 @@
                 android:text="What language should a developer focus on"
                 android:textSize="20sp"
                 android:textStyle="bold"
+                android:fontFamily="@font/poppins_semibold"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/cardViewTv3" />
@@ -97,6 +101,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="15 answers"
+                android:fontFamily="@font/poppins_medium"
                 android:textSize="16sp"
                 android:layout_marginTop="8dp"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -119,6 +124,7 @@
                 android:text="Rate"
                 android:textSize="16sp"
                 android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins_medium"
                 app:layout_constraintLeft_toRightOf="@+id/starIconIv"
                 app:layout_constraintTop_toBottomOf="@id/barrier" />
 
@@ -137,6 +143,7 @@
                 android:layout_height="wrap_content"
                 android:text="Save"
                 android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins_medium"
                 app:layout_constraintLeft_toRightOf="@id/saveIconIv"
                 app:layout_constraintTop_toBottomOf="@id/barrier" />
 

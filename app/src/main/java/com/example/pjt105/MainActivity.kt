@@ -29,6 +29,8 @@ class MainActivity : AppCompatActivity() {
     private val findFriendsFragment = FindFriendsFragment()
     private val privacyFragment = PrivacyFragment()
     private val helpsFragment = HelpsFragment()
+    private val profileFragment = ProfileFragment()
+
 
     lateinit var toggle: ActionBarDrawerToggle
 
@@ -68,6 +70,7 @@ class MainActivity : AppCompatActivity() {
             //this block is responsible for switching drawer navigation fragments
             when(it.itemId){
                 R.id.menu_home_icon -> replaceFragment(homeFragment, it.title.toString())
+                R.id.profile_icon -> replaceFragment(profileFragment, it.title.toString())
                 R.id.group_icon -> replaceFragment(groupFragment, it.title.toString())
                 R.id.events_icon -> replaceFragment(eventsFragment, it.title.toString())
                 R.id.notification_icon -> replaceFragment(notificationFragment, it.title.toString())
@@ -95,7 +98,6 @@ class MainActivity : AppCompatActivity() {
         binding.drawerLayout.closeDrawers()
         setTitle(title)
     }
-
 
 
 }

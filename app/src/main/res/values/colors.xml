@@ -19,4 +19,7 @@
     <color name="colorPrimaryDark">#333757FF</color>
     <color name="colorPrimary">#333757FF</color>
 
+
+    <color name="settings_button_color">#3757FF</color>
+
 </resources>
