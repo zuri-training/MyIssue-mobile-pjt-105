@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.PJT105" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#3757FF</item>
-        <item name="colorPrimaryDark">#3757FFF</item>
+        <item name="colorPrimary">@color/standard</item>
+        <item name="colorPrimaryDark">@color/standard</item>
         <item name="colorAccent">@color/teal_200</item>
         <!-- Customize your theme here. -->
     </style>

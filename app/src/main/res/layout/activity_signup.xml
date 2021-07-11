@@ -269,7 +269,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginLeft="32dp"
-                android:layout_marginTop="22dp"
                 android:layout_marginEnd="32dp"
                 android:layout_marginRight="32dp"
                 android:layout_marginBottom="16dp"
@@ -280,6 +279,35 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkBox2" />
+            <TextView
+                android:id="@+id/textView_already"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginRight="22dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="Already have an account?"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button4" />
+
+            <TextView
+                android:id="@+id/loginText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="52dp"
+                android:layout_marginRight="52dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="Login"
+                android:textColor="#3757FF"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/textView_already"
+                app:layout_constraintTop_toBottomOf="@id/button4" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 
