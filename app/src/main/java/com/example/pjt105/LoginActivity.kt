@@ -2,17 +2,18 @@ package com.example.pjt105
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.pjt105.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityLoginBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val registerText: TextView = findViewById(R.id.registerText)
-        registerText.setOnClickListener() {
-            val intent = Intent (this, SignupActivity::class.java)
+        binding.registerText.setOnClickListener() {
+            val intent = Intent (this@LoginActivity, SignupActivity::class.java)
             startActivity(intent)
         }
     }

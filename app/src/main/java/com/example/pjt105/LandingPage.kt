@@ -1,42 +1,67 @@
 package com.example.pjt105
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.core.view.GravityCompat
-import androidx.fragment.app.Fragment
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentTransaction
+import com.example.pjt105.databinding.ActivityLandingPageBinding
+import com.example.pjt105.databinding.LandingPageMainBinding
 import com.google.android.material.navigation.NavigationView
-import kotlinx.android.synthetic.main.activity_landing_page.*
-import kotlinx.android.synthetic.main.landing_page_main.*
+
 
 class LandingPage : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+    private lateinit var binding: ActivityLandingPageBinding
+    private lateinit var binding1: LandingPageMainBinding
+    private lateinit var homeFragment:Home2
+    private lateinit var contactUsFragment : ContactUs_
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_landing_page)
+        binding = ActivityLandingPageBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        setSupportActionBar(toolbar)
 
-        val toggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open, R.string.close)
+        setSupportActionBar(binding1.toolbar)
+        val actionBar = supportActionBar
+        actionBar?.title = null
+
+        val toggle = ActionBarDrawerToggle(this, binding.drawerLayout, binding1.toolbar, R.string.open, R.string.close)
         toggle.isDrawerIndicatorEnabled = true
-        drawerLayout.addDrawerListener(toggle)
+        binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
-        nav_menu.setNavigationItemSelectedListener(this)
+        binding.navView.setNavigationItemSelectedListener(this)
+        homeFragment = Home2()
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragment_container, homeFragment)
+            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+            .commit()
 
-        changeFragment(Home())
+
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        drawerLayout.closeDrawer(GravityCompat.START)
 
         when(item.itemId) {
             R.id.home -> {
-                changeFragment(Home())
+                homeFragment = Home2()
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, homeFragment)
+                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                    .commit()
             }
             R.id.contact_us_menu -> {
-                changeFragment(ContactUs_())
+                contactUsFragment = ContactUs_()
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, contactUsFragment)
+                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                    .commit()
             }
             R.id.login_menu -> {
                 val intent = Intent (this, LoginActivity::class.java)
@@ -50,8 +75,4 @@ class LandingPage : AppCompatActivity(), NavigationView.OnNavigationItemSelected
         return true
     }
 
-    fun changeFragment(frag: Fragment) {
-        val fragment = supportFragmentManager.beginTransaction()
-        fragment.replace(R.id.fragment_container, frag).commit()
-    }
 }
