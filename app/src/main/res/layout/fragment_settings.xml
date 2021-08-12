@@ -16,6 +16,7 @@
         app:layout_constraintBottom_toTopOf="@id/settingCL"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+
         android:id="@+id/settingCL"
         android:layout_width="match_parent"
         android:layout_height="650dp"
