@@ -26,7 +26,16 @@ class SignupActivity : AppCompatActivity() {
 //            startActivity(intent)
 //        }
         dataSetUp(binding)
+        alreadySignedUp(binding)
     }
+
+
+    private fun alreadySignedUp(binding: ActivitySignupBinding){
+        binding.textView11.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            }
+        }
 
 
     private fun dataSetUp(binding: ActivitySignupBinding) {
@@ -37,7 +46,6 @@ class SignupActivity : AppCompatActivity() {
         val emailEditText = binding.editEmail2
         val passwordEditText = binding.editPassword2
 //        confirmPasswordEditText = binding.confirmPassword
-
 
         binding.registerButton.setOnClickListener {
 

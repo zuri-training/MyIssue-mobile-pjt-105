@@ -5,11 +5,14 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.pjt105.databinding.ActivityMainBinding
+import com.example.pjt105.databinding.FragmentHomeBinding
 import com.example.pjt105.fragments.*
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+
+//    private var adapter = QuestionAdapter()
 
 
     //bottom nav fragments instantiation
@@ -40,7 +43,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         changeFragment(homeFragment)
+//        makeAPost()
 
     }
 
@@ -98,6 +103,7 @@ class MainActivity : AppCompatActivity() {
         binding.drawerLayout.closeDrawers()
         setTitle(title)
     }
+
 
 
 }

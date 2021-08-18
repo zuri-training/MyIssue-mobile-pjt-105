@@ -6,9 +6,9 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@drawable/rounded_edges_background"
-    android:layout_marginStart="20dp"
+    android:layout_marginStart="10dp"
     android:layout_marginTop="16dp"
-    android:layout_marginEnd="20dp">
+    android:layout_marginEnd="10dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -52,23 +52,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:textSize="16sp"
+                android:text="10 mins"
                 android:fontFamily="@font/poppins_light"
                 app:layout_constraintLeft_toLeftOf="@id/imageView"
                 app:layout_constraintRight_toRightOf="@id/imageView"
-                app:layout_constraintTop_toBottomOf="@id/imageView"
-                tools:text="10 mins" />
+                app:layout_constraintTop_toBottomOf="@id/imageView" />
 
             <TextView
                 android:id="@+id/cardViewTv3"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="25dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginLeft="58dp"
-                android:textSize="16sp"
                 android:fontFamily="@font/poppins_medium"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.418"
-                app:layout_constraintStart_toEndOf="@+id/cardViewTv2"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="@id/cardViewTv1"
+                app:layout_constraintRight_toRightOf="@id/cardViewTv1"
                 app:layout_constraintTop_toBottomOf="@id/cardViewTv1"
                 tools:text="Frontend" />
 
